@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+<rect width="1400" height="820" fill="#ffffff"/>
+<g font-family="Arial, sans-serif">
+<text x="700" y="34" text-anchor="middle" font-size="18" font-weight="bold" font-style="normal" fill="#222" stroke="none">Завдання 1. Формування польотного завдання</text>
+<rect x="30" y="60" width="280" height="128" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="170" y="82" text-anchor="middle" font-size="13" font-weight="normal" font-style="italic" fill="#222" stroke="none">&lt;&lt;Client&gt;&gt;</text>
+<text x="170" y="102" text-anchor="middle" font-size="15" font-weight="bold" font-style="normal" fill="#222" stroke="none">Program</text>
+<line x1="30.0" y1="116.0" x2="310.0" y2="116.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<line x1="30.0" y1="130.0" x2="310.0" y2="130.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="42" y="150" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ Main() : void</text>
+<line x1="42" y1="153" x2="162" y2="153" stroke="#222" stroke-width="1"/>
+<text x="42" y="172" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- Situation1() : void</text>
+<line x1="42" y1="175" x2="210" y2="175" stroke="#222" stroke-width="1"/>
+<rect x="400" y="60" width="520" height="150" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="660" y="82" text-anchor="middle" font-size="13" font-weight="normal" font-style="italic" fill="#222" stroke="none">&lt;&lt;Director&gt;&gt;</text>
+<text x="660" y="102" text-anchor="middle" font-size="15" font-weight="bold" font-style="normal" fill="#222" stroke="none">FlightAssignmentDirector</text>
+<line x1="400.0" y1="116.0" x2="920.0" y2="116.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="412" y="136" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- journal : Journal</text>
+<line x1="400.0" y1="152.0" x2="920.0" y2="152.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="412" y="172" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ FlightAssignmentDirector(journal)</text>
+<text x="412" y="194" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ Form(...) : FlightAssignment</text>
+<rect x="1020" y="60" width="350" height="130" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1195" y="82" text-anchor="middle" font-size="15" font-weight="bold" font-style="normal" fill="#222" stroke="none">Journal</text>
+<line x1="1020.0" y1="96.0" x2="1370.0" y2="96.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="1032" y="116" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- minutes : int</text>
+<line x1="1020.0" y1="132.0" x2="1370.0" y2="132.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="1032" y="152" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ Journal(startHour, startMinute)</text>
+<text x="1032" y="174" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ Write(source, message) : void</text>
+<rect x="30" y="300" width="640" height="480" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="350" y="322" text-anchor="middle" font-size="13" font-weight="normal" font-style="italic" fill="#222" stroke="none">&lt;&lt;Builder&gt;&gt;</text>
+<text x="350" y="342" text-anchor="middle" font-size="15" font-weight="bold" font-style="normal" fill="#222" stroke="none">FlightAssignmentBuilder</text>
+<line x1="30.0" y1="356.0" x2="670.0" y2="356.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="42" y="376" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- journal : Journal</text>
+<text x="42" y="398" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- flightNumber : string</text>
+<text x="42" y="420" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- kind : string</text>
+<text x="42" y="442" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- route : string</text>
+<text x="42" y="464" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- fuel : string</text>
+<text x="42" y="486" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- weather : string</text>
+<text x="42" y="508" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- alternates : string</text>
+<text x="42" y="530" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- notices : string</text>
+<text x="42" y="552" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- cargo : string</text>
+<text x="42" y="574" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">- special : string</text>
+<line x1="30.0" y1="590.0" x2="670.0" y2="590.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="42" y="610" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ SetRoute(value : string) : void</text>
+<text x="42" y="632" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ SetFuel(value : string) : void</text>
+<text x="42" y="654" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ SetWeather(value : string) : void</text>
+<text x="42" y="676" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ SetAlternates(value : string) : void</text>
+<text x="42" y="698" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ SetPilotNotices(value : string) : void</text>
+<text x="42" y="720" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ SetCargo(value : string) : void</text>
+<text x="42" y="742" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ SetSpecialInstructions(value : string) : void</text>
+<text x="42" y="764" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ Build() : FlightAssignment</text>
+<rect x="780" y="300" width="560" height="304" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1060" y="322" text-anchor="middle" font-size="13" font-weight="normal" font-style="italic" fill="#222" stroke="none">&lt;&lt;Product&gt;&gt;</text>
+<text x="1060" y="342" text-anchor="middle" font-size="15" font-weight="bold" font-style="normal" fill="#222" stroke="none">FlightAssignment</text>
+<line x1="780.0" y1="356.0" x2="1340.0" y2="356.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="792" y="376" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ FlightNumber : string</text>
+<text x="792" y="398" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ Kind : string</text>
+<text x="792" y="420" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ Route : string</text>
+<text x="792" y="442" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ FuelCalculation : string</text>
+<text x="792" y="464" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ Weather : string</text>
+<text x="792" y="486" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ AlternateAirports : string</text>
+<text x="792" y="508" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ PilotNotices : string</text>
+<text x="792" y="530" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ Cargo : string</text>
+<text x="792" y="552" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ SpecialInstructions : string</text>
+<line x1="780.0" y1="568.0" x2="1340.0" y2="568.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="792" y="588" text-anchor="start" font-size="14" font-weight="normal" font-style="normal" fill="#222" stroke="none">+ Print() : void</text>
+<line x1="310.0" y1="130.0" x2="400.0" y2="130.0" stroke="#222" stroke-width="1.4" fill="none" stroke-dasharray="7 5"/>
+<text x="318" y="120" text-anchor="start" font-size="13" font-weight="normal" font-style="normal" fill="#222" stroke="none">створює</text>
+<line x1="920.0" y1="130.0" x2="1020.0" y2="130.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="930" y="118" text-anchor="start" font-size="13" font-weight="normal" font-style="normal" fill="#222" stroke="none">1 журнал 1</text>
+<line x1="560.0" y1="230.0" x2="350.0" y2="300.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="400" y="270" text-anchor="start" font-size="13" font-weight="normal" font-style="normal" fill="#222" stroke="none">1  керує кроками  1</text>
+<line x1="670.0" y1="520.0" x2="780.0" y2="520.0" stroke="#222" stroke-width="1.4" fill="none" stroke-dasharray="7 5"/>
+<text x="690" y="508" text-anchor="start" font-size="13" font-weight="normal" font-style="normal" fill="#222" stroke="none">створює</text>
+<line x1="670.0" y1="300.0" x2="670.0" y2="250.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<line x1="670.0" y1="250.0" x2="1190.0" y2="250.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<line x1="1190.0" y1="250.0" x2="1190.0" y2="210.0" stroke="#222" stroke-width="1.4" fill="none"/>
+<text x="760" y="242" text-anchor="start" font-size="13" font-weight="normal" font-style="normal" fill="#222" stroke="none">будівельник теж веде журнал</text>
+</g>
+</svg>
