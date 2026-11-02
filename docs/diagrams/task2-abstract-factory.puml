@@ -1,0 +1,86 @@
+@startuml task2-abstract-factory
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+title Завдання 2. Комплекти наземного обладнання (Abstract Factory)
+
+interface IEquipment <<AbstractProduct>> {
+  + Name : string
+  + AircraftClass : string
+}
+
+class EquipmentItem <<ConcreteProduct>> {
+  + Name : string
+  + AircraftClass : string
+  + EquipmentItem(name : string, aircraftClass : string)
+}
+
+interface IEquipmentFactory <<AbstractFactory>> {
+  + AircraftClass : string
+  + CreateStairs() : IEquipment
+  + CreateTractor() : IEquipment
+  + CreateLoader() : IEquipment
+}
+
+class NarrowBodyFactory <<ConcreteFactory>> {
+  + AircraftClass : string
+  + CreateStairs() : IEquipment
+  + CreateTractor() : IEquipment
+  + CreateLoader() : IEquipment
+}
+
+class RegionalFactory <<ConcreteFactory>> {
+  + AircraftClass : string
+  + CreateStairs() : IEquipment
+  + CreateTractor() : IEquipment
+  + CreateLoader() : IEquipment
+}
+
+class WideBodyFactory <<ConcreteFactory>> {
+  + AircraftClass : string
+  + CreateStairs() : IEquipment
+  + CreateTractor() : IEquipment
+  + CreateLoader() : IEquipment
+}
+
+class EquipmentKit {
+  + FlightNumber : string
+  + AircraftClass : string
+  + Stairs : IEquipment
+  + Tractor : IEquipment
+  + Loader : IEquipment
+  + Print() : void
+}
+
+class GroundDispatcher <<Client>> {
+  - journal : Journal
+  + GroundDispatcher(journal : Journal)
+  + Serve(factory : IEquipmentFactory, flightNumber : string) : EquipmentKit
+}
+
+class Journal {
+  - minutes : int
+  + Journal(startHour : int, startMinute : int)
+  + Write(source : string, message : string) : void
+}
+
+class Program <<Client>> {
+  + {static} Main() : void
+  - {static} Situation2() : void
+}
+
+EquipmentItem ..|> IEquipment
+NarrowBodyFactory ..|> IEquipmentFactory
+RegionalFactory ..|> IEquipmentFactory
+WideBodyFactory ..|> IEquipmentFactory
+NarrowBodyFactory ..> EquipmentItem : створює
+RegionalFactory ..> EquipmentItem : створює
+WideBodyFactory ..> EquipmentItem : створює
+GroundDispatcher "1" --> "1" IEquipmentFactory : працює через абстракцію
+GroundDispatcher ..> EquipmentKit : створює
+EquipmentKit "1" *-- "3" IEquipment : зберігає
+GroundDispatcher --> Journal
+Program ..> GroundDispatcher : створює
+Program ..> NarrowBodyFactory : створює
+Program ..> RegionalFactory : створює
+Program ..> WideBodyFactory : створює
+@enduml

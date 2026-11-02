@@ -1,0 +1,64 @@
+@startuml task1-builder
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+title Завдання 1. Формування польотного завдання (Builder)
+
+class Program <<Client>> {
+  + {static} Main() : void
+  - {static} Situation1() : void
+}
+
+class FlightAssignmentDirector <<Director>> {
+  - journal : Journal
+  + FlightAssignmentDirector(journal : Journal)
+  + Form(builder, route, fuel, weather, alternates, notices, cargo, special) : FlightAssignment
+}
+
+class FlightAssignmentBuilder <<Builder>> {
+  - journal : Journal
+  - flightNumber : string
+  - kind : string
+  - route : string
+  - fuel : string
+  - weather : string
+  - alternates : string
+  - notices : string
+  - cargo : string
+  - special : string
+  + FlightAssignmentBuilder(flightNumber, kind, journal)
+  + SetRoute(value : string) : void
+  + SetFuel(value : string) : void
+  + SetWeather(value : string) : void
+  + SetAlternates(value : string) : void
+  + SetPilotNotices(value : string) : void
+  + SetCargo(value : string) : void
+  + SetSpecialInstructions(value : string) : void
+  + Build() : FlightAssignment
+}
+
+class FlightAssignment <<Product>> {
+  + FlightNumber : string
+  + Kind : string
+  + Route : string
+  + FuelCalculation : string
+  + Weather : string
+  + AlternateAirports : string
+  + PilotNotices : string
+  + Cargo : string
+  + SpecialInstructions : string
+  + Print() : void
+}
+
+class Journal {
+  - minutes : int
+  + Journal(startHour : int, startMinute : int)
+  + Write(source : string, message : string) : void
+}
+
+Program ..> FlightAssignmentDirector : створює
+Program ..> FlightAssignmentBuilder : створює
+FlightAssignmentDirector "1" --> "1" FlightAssignmentBuilder : керує кроками
+FlightAssignmentBuilder ..> FlightAssignment : створює
+FlightAssignmentDirector --> Journal : веде журнал
+FlightAssignmentBuilder --> Journal : веде журнал
+@enduml
